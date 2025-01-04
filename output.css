@@ -1787,6 +1787,14 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-all{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1797,7 +1805,7 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* HTML: <div class="loader"></div> */
+/* loading Animation */
 
 .loader-wrapper {
   position: fixed;
@@ -1847,6 +1855,35 @@ video {
 
   83% {
     clip-path: inset(0 -100px 0 0);
+  }
+}
+
+/* Scroll Animations */
+
+.notshow {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translate(100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate(0%);
+}
+
+.product-display:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.product-display:nth-child(3) {
+  transition-delay: 300ms;
+}
+
+@media (prefers-reduced-motion) {
+  .notshow {
+    transition: none;
   }
 }
 

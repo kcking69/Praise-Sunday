@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* HTML: <div class="loader"></div> */
+/* loading Animation */
 .loader-wrapper {
   position: fixed;
   width: 100%;
@@ -49,5 +49,32 @@
   }
   83% {
     clip-path: inset(0 -100px 0 0);
+  }
+}
+
+/* Scroll Animations */
+.notshow {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translate(100%);
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate(0%);
+}
+
+.product-display:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.product-display:nth-child(3) {
+  transition-delay: 300ms;
+}
+
+@media (prefers-reduced-motion) {
+  .notshow {
+    transition: none;
   }
 }

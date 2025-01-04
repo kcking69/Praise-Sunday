@@ -9,6 +9,7 @@ const year = document.querySelector('#year');
 year.innerHTML = currentYear;
 let clicked = false;
 
+// hamburger-menu
 hamburger.addEventListener('click', () => {
   if (!clicked) {
     firstLine.classList.add('-rotate-45');
@@ -27,7 +28,24 @@ hamburger.addEventListener('click', () => {
   }
 });
 
+// Scroll Animation
 window.addEventListener('load', () => {
   const loader = document.querySelector('.loader-wrapper');
   loader.classList.add('hidden');
 });
+
+// Animate on Scroll
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+    //  else {
+    //   entry.target.classList.remove('show');
+    // }
+  });
+});
+
+const hiddenElements = document.querySelectorAll('.notshow');
+hiddenElements.forEach((el) => observer.observe(el));
