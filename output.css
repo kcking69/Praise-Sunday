@@ -1814,6 +1814,10 @@ video {
   justify-content: center;
 }
 
+.hidden {
+  display: none;
+}
+
 .loader {
   width: 20px;
   height: 20px;
