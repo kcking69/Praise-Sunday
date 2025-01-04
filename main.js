@@ -3,7 +3,10 @@ const firstLine = document.querySelector('.span-1');
 const secondLine = document.querySelector('.span-2');
 const thirdLine = document.querySelector('.span-3');
 const links = document.querySelector('.links');
+const currentYear = new Date().getFullYear();
+const year = document.querySelector('#year');
 
+year.innerHTML = currentYear;
 let clicked = false;
 
 hamburger.addEventListener('click', () => {
