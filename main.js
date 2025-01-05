@@ -13,15 +13,13 @@ let clicked = false;
 hamburger.addEventListener('click', () => {
   if (!clicked) {
     firstLine.classList.add('-rotate-45');
-    firstLine.classList.add('translate-y-[22px]');
-    secondLine.classList.add('invisible');
+    secondLine.classList.add('hidden');
     thirdLine.classList.add('rotate-45');
     links.classList.remove('invisible');
     clicked = true;
-  } else {
+  } else if (clicked) {
     firstLine.classList.remove('-rotate-45');
-    firstLine.classList.remove('translate-y-[22px]');
-    secondLine.classList.remove('invisible');
+    secondLine.classList.remove('hidden');
     thirdLine.classList.remove('rotate-45');
     links.classList.add('invisible');
     clicked = false;

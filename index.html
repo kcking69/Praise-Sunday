@@ -22,40 +22,34 @@
         </div>
 
         <div class="w-1/3 text-[17px] hidden md:flex gap-2 justify-between">
-          <a href="#">About Me</a>
-          <a href="#">Projects</a>
-          <a href="#">Contact Me</a>
+          <a class="hover:text-lightgreen hover:underline" href="#About">About Me</a>
+          <a class="hover:text-lightgreen hover:underline" href="#Projects">Projects</a>
+          <a class="hover:text-lightgreen hover:underline" href="#cta">Contact Me</a>
         </div>
 
         <div
-          class="bg-white links invisible w-fit absolute top-14 text-center py-1 px-5 shadow-lg right-14"
+          class="bg-white links invisible w-full h-[174px] absolute top-0 text-center py-1 px-5 shadow-lg right-0 left-0 md:hidden"
         >
           <ul>
-            <li class="py-2 px-2 hover:text-gray-500 hover:underline">
+            <li class="py-2 px-2 hover:text-lightgreen hover:underline">
               <a href="#About">About Me</a>
             </li>
-            <li class="py-2 px-2 hover:text-gray-500 hover:underline">
+            <li class="py-2 px-2 hover:text-lightgreen hover:underline">
               <a href="#Projects">Projects</a>
             </li>
-            <li class="py-2 px-2 hover:text-gray-500 hover:underline">
-              <a href="#Contact">Contact Me</a>
+            <li class="py-2 px-2 hover:text-lightgreen hover:underline">
+              <a href="#cta">Contact Me</a>
             </li>
           </ul>
         </div>
 
         <div
-          class="hamburger w-20 flex flex-col gap-1.5 justify-around cursor-pointer hover:scale-95 transition-all md:hidden"
-        >
-          <span
-            class="span-1 bg-darkgreen h-1.5 w-3/5 self-center rounded-md"
-          ></span>
-          <span
-            class="span-2 bg-darkgreen h-1.5 w-3/5 self-center rounded-md"
-          ></span>
-          <span
-            class="span-3 bg-darkgreen h-1.5 w-3/5 self-center rounded-md"
-          ></span>
-        </div>
+        class="hamburger relative w-20 bg-pink-500 flex flex-col justify-center items-center cursor-pointer hover:scale-95 transition-all md:hidden"
+      >
+      <span class="span-2 bg-darkgreen mb-8 top-1/4 h-1.5 w-3/5 rounded-md"></span>
+        <span class="span-1 bg-darkgreen absolute h-1.5 w-3/5 rounded-md"></span>
+        <span class="span-3 bg-darkgreen absolute h-1.5 w-3/5 rounded-md"></span>
+      </div>
 
         <div class="cta hidden md:block">
           <button
@@ -67,7 +61,7 @@
       </div>
     </nav>
 
-    <!-- Hero -->
+<!-- Hero -->
     <section
       class="hero w-full h-fit mt-[82px] px-4 lg:px-20 lg:h-[600px] overflow-hidden"
     >
