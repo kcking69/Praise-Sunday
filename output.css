@@ -714,6 +714,10 @@ video {
   top: 0px;
 }
 
+.top-1{
+  top: 0.25rem;
+}
+
 .top-1\/4{
   top: 25%;
 }
@@ -1889,10 +1893,6 @@ video {
   .notshow {
     transition: none;
   }
-}
-
-.hamburger-menu {
-  transform: translateY(30%);
 }
 
 .hover\:scale-95:hover{
